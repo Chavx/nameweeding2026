@@ -424,7 +424,16 @@
                 return;
             }
             if (!response.ok) {
-                alert('មិនអាចរក្សាទុកឈ្មោះភ្ញៀវបានទេ។ សូមពិនិត្យការកំណត់ KV namespace INVITATIONS។');
+                let errorDetail = `HTTP ${response.status}`;
+                try {
+                    const errorData = await response.json();
+                    if (errorData && typeof errorData.error === 'string') {
+                        errorDetail = errorData.error;
+                    }
+                } catch (_) {
+                    // The endpoint may have returned an HTML error page rather than JSON.
+                }
+                alert(`មិនអាចរក្សាទុកឈ្មោះភ្ញៀវបានទេ៖ ${errorDetail}\n\nសូមពិនិត្យ KV binding INVITATIONS និងថា _worker.js បាន Deploy ក្នុង Pages project ត្រឹមត្រូវ។`);
                 return;
             }
 
