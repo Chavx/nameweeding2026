@@ -3,554 +3,670 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ</title>
-    <!-- Open Graph Meta Tags for Telegram/Messenger Preview -->
-    <meta property="og:title" content="អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ 💍">
-    <meta property="og:description" content="សូមគោរពអញ្ជើញភ្ញៀវកិត្តិយស ចូលរួមជាអធិបតី និងប្រសិទ្ធពរជ័យក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
-    <meta property="og:image" content="https://hunkimchhornthyphathy2026.pages.dev/cheaanonandsiengjing.jpg">
+
+    <title>Digital Invitation - លិខិតអញ្ជើញ</title>
+
+    <!-- Facebook / Messenger / WhatsApp Meta Tags -->
+    <meta property="og:title" content="អាពាហ៍ពិពាហ៍ 💍">
+    <meta property="og:description" content="សូមគោរពអញ្ជើញលោកអ្នកចូលរួមក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
+    <meta property="og:image" content="https://pisethandmonypenita.netlify.app/PisethandMonypenita.jpg">
     <meta property="og:url" content="https://hunkimchhornthyphathy2026.pages.dev/">
     <meta property="og:type" content="website">
 
+    <!-- Twitter / Telegram Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="អាពាហ៍ពិពាហ៍ 💍">
+    <meta name="twitter:description" content="សូមគោរពអញ្ជើញលោកអ្នកចូលរួមក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
+    <meta name="twitter:image" content="https://pisethandmonypenita.netlify.app/PisethandMonypenita.jpg">
+
+    <!-- កូដ JavaScript សម្រាប់ទាញយកឈ្មោះភ្ញៀវមកដូរ Meta ស្វ័យប្រវត្តិ -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        let guestNameMeta = urlParams.get('to');
+
+        if (!guestNameMeta) {
+            const pathName = decodeURIComponent(window.location.pathname.substring(1)).trim();
+            if (pathName && pathName !== "index.html") {
+                guestNameMeta = pathName;
+            }
+        }
+
+        if (guestNameMeta) {
+            document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${guestNameMeta}`;
+            
+            let ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestNameMeta}`);
+
+            let ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestNameMeta} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+
+            let twTitle = document.querySelector('meta[name="twitter:title"]');
+            if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestNameMeta}`);
+
+            let twDesc = document.querySelector('meta[name="twitter:description"]');
+            if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestNameMeta} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300..700;1,300..700&family=Moul&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+        :root {
+            --silver-1: #ffffff;
+            --silver-2: #e9e9e9;
+            --silver-3: #c9c9c9;
+            --silver-4: #a8a8a8;
+            --silver-5: #8a8a8a;
+            --silver-6: #cfcfcf;
+            --silver-7: #666666;
+            --primary-gold: #E8E8E8;
+            --dark-gold: #8A8A8A;
+            --bg-dark: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(220, 220, 220, 0.42);
+            --text-light: #f8fafc;
+            --text-gold: #F1F1F1;
+            --glow-gold: rgba(220, 220, 220, 0.25);
+            --text-formal: #D0D0D0; 
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
 
         body {
-            font-family: 'Kantumruy Pro', 'Khmer OS Siemreap', sans-serif;
-            background: #808080 url('./cheaanonandsiengjing.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #020617;
+            color: var(--text-light);
+            font-family: 'Kantumruy Pro', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
+            overflow-x: hidden;
+            padding: 1rem;
             position: relative;
         }
 
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.55);
+        /* Falling Petals Canvas Container */
+        #petal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
             z-index: 1;
-        }
-
-        .card {
-            position: relative;
-            z-index: 2;
-            background: rgba(20, 24, 33, 0.94);
-            backdrop-filter: blur(12px);
-            padding: 35px 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-            width: 100%;
-            max-width: 450px;
-            box-sizing: border-box;
-            border: 1px solid rgba(212, 175, 55, 0.4);
-        }
-
-        h2 {
-            color: #f4d878;
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 22px;
-            font-weight: 700;
-        }
-
-        h2.names {
-            font-size: 18px;
-            margin-bottom: 25px;
-            color: #d4af37;
-            font-family: 'Moul', cursive;
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #f7dc82;
-            font-size: 14px;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 20px;
-            border: 1px solid #d4af37;
-            border-radius: 10px;
-            font-size: 15px;
-            box-sizing: border-box;
-            background: rgba(255, 255, 255, 0.9);
-            color: #111;
-            font-family: 'Kantumruy Pro', sans-serif;
-        }
-
-        input[type="text"]:focus {
-            border-color: #fff;
-            outline: none;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
-        }
-
-        button {
-            background: linear-gradient(135deg, #d4af37 0%, #8a6508 100%);
-            color: #fff;
-            border: none;
-            padding: 14px;
-            width: 100%;
-            font-size: 15px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-            margin-bottom: 10px;
-            font-family: 'Kantumruy Pro', sans-serif;
-            transition: transform 0.1s ease, opacity 0.2s;
-        }
-
-        button:hover { opacity: 0.92; filter: brightness(1.08); }
-        button:active { transform: scale(0.98); }
-
-        .result-box {
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px dashed rgba(212, 175, 55, 0.5);
-            display: none;
-        }
-
-        #generatedLinkText {
-            color: #93c5fd;
-            font-size: 12px;
-            margin: 0 0 15px 0;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            word-break: break-all;
-        }
-
-        .qrcode-wrapper {
-            display: block;
-            padding: 0;
-            background: transparent;
-            border-radius: 0;
-            margin: 14px 0 18px;
-            overflow: visible;
-        }
-
-        .wedding-qr-card {
-            width: 100%;
-            max-width: 340px;
-            box-sizing: border-box;
-            margin: 0 auto;
-            padding: 18px 18px 20px;
-            background: #fffdf8;
-            color: #35312c;
-            text-align: center;
-            border: 1px solid #dfc99f;
-            box-shadow: 0 8px 22px rgba(0,0,0,.20);
-            position: relative;
             overflow: hidden;
         }
 
-        .wedding-qr-card::before {
+        .petal {
+            position: absolute;
+            background: linear-gradient(135deg, #ffb7c5, #ff69b4);
+            border-radius: 15px 0 15px 0;
+            opacity: 0.7;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(105vh) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .bg-media {
+            position: fixed !important;
+            inset: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+            z-index: -2 !important;
+            display: block !important;
+        }
+
+        body {
+            background: transparent !important;
+            isolation: isolate !important;
+        }
+
+        .invitation-card {
+            width: 486px !important;
+            min-width: 486px !important;
+            max-width: 486px !important;
+            height: 864px !important;
+            min-height: 864px !important;
+            max-height: 864px !important;
+            aspect-ratio: 9 / 16 !important;
+            flex: 0 0 486px !important;
+            background: linear-gradient(#2b265c, rgba(15, 23, 42, 0.6)), url('/backgrund/3.jpg');
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2rem 1.2rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px var(--glow-gold);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 2;
+            transition: all 0.4s ease;
+            isolation: isolate;
+        }
+
+        .invitation-card::before, .invitation-card::after {
+            content: ''; 
+            position: absolute; 
+            width: 40px; 
+            height: 40px; 
+            border: 1px solid var(--primary-gold); 
+            pointer-events: none; 
+            opacity: 0.5; 
+            z-index: 5;
+        }
+        .invitation-card::before { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+        .invitation-card::after { 
             content: "";
             position: absolute;
-            inset: 7px;
-            border: 1px solid rgba(184, 145, 77, .48);
-            pointer-events: none;
-        }
-
-        .qr-card-overline {
-            color: #9a7845;
-            font-size: 11px;
-            letter-spacing: 2.2px;
-            font-family: Georgia, serif;
-            margin: 2px 0 13px;
-        }
-
-        .qr-card-photo-frame {
-            width: 100%;
-            height: 150px;
-            margin: 0 auto 17px;
-            padding: 5px;
-            box-sizing: border-box;
-            background: #fff;
-            border: 1px solid #e8dfcf;
-        }
-
-        .qr-card-photo-frame img {
+            inset: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            display: block;
+            border: 0 !important;
+            background: url("/backgrund/frame.png") center center / 100% 100% no-repeat;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 1;
         }
 
-        .qr-card-heading {
-            color: #5f4b32;
-            font-weight: 700;
-            font-size: 17px;
-            margin-bottom: 5px;
+        .top-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 30;
         }
 
-        .qr-card-description {
-            color: #6e675c;
-            font-size: 11px;
-            line-height: 1.75;
-            margin: 0 auto 12px;
+        .icon-btn {
+            background: rgba(212, 175, 55, 0.2); 
+            border: 1px solid var(--primary-gold); 
+            color: var(--primary-gold); 
+            border-radius: 20px;
+            padding: 0 10px;
+            height: 38px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer; 
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
 
-        .design-qr {
-            width: 174px;
-            min-height: 174px;
-            margin: 0 auto 13px;
-            padding: 7px;
+        .music-btn {
+            border-radius: 50%;
+            width: 38px;
+            padding: 0;
+        }
+        .music-btn.playing { animation: pulse-glow 2s infinite; }
+        @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(220, 220, 220, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+
+        .page {
+            display: none; 
+            flex-direction: column; 
+            width: 100%; 
+            height: 100%; 
+            animation: fadeIn 0.4s ease-in-out; 
+            overflow-y: auto; 
+            padding: 0.5rem;
+            scroll-behavior: smooth;
+            z-index: 10;
+            border-radius: 16px;
+            position: relative;
+        }
+        
+        #page1 {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 16px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .header-title { font-family: 'Moul', cursive; color: var(--primary-gold); font-size: 1.3rem; margin-bottom: 0.3rem; line-height: 1.8; }
+        .sub-title { font-family: 'Playfair Display', serif; letter-spacing: 3px; font-size: 0.85rem; color: var(--text-gold); text-transform: uppercase; margin-bottom: 1rem; }
+        
+        .envelope-cover {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .wax-seal-btn {
+            width: 90px;
+            height: 90px;
+            background: radial-gradient(circle, #ffffff 0%, #d6d6d6 28%, #9d9d9d 55%, #6f6f6f 78%, #f5f5f5 100%);
+            border-radius: 50%;
+            border: 3px dashed #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-sizing: border-box;
-            background: #fff;
-            border: 1px solid #eee4d4;
+            cursor: pointer;
+            box-shadow: 0 0 25px rgba(220, 220, 220, 0.6);
+            margin: 1.2rem 0;
+            transition: transform 0.3s ease;
         }
+        .wax-seal-btn:hover { transform: scale(1.08); }
+        .wax-seal-btn span { font-size: 1.8rem; }
 
-        .design-qr img, .design-qr canvas {
-            max-width: 100%;
-            height: auto;
-            display: block;
+        .guest-invitation-container {
+            margin: 0.6rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
-
-        .qr-card-names {
-            color: #6b5330;
-            font-size: 15px;
-            line-height: 1.6;
+        .guest-label { font-family: 'Moul', cursive; color: var(--primary-gold); font-size: 1rem; margin-bottom: 0.4rem; }
+        .guest-name-box {
+            background: linear-gradient(135deg, #e6c875, #b8860b, #e6c875);
+            border-radius: 50px;
+            padding: 3px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .guest-name-inner {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            color: #1e293b;
+            font-size: 0.9rem;
             font-weight: 700;
-            margin-top: 1px;
-        }
-
-        .qr-card-names span { color: #b28a45; padding: 0 3px; }
-
-        .qr-card-footer {
-            font-size: 10px;
-            color: #918473;
-            line-height: 1.6;
-            margin-top: 5px;
-        }
-
-        #guestInvitationSection {
-            display: none;
             text-align: center;
-            color: #fff;
         }
 
-        .guest-card-box {
-            background: #fffdf8;
-            color: #35312c;
-            padding: 25px 20px;
-            border-radius: 15px;
-            border: 1px solid #dfc99f;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        .copy-msg-btn {
+            background: linear-gradient(120deg, #f4d878, #c49a25);
+            color: #2f351e;
+            border: 1px solid #ffe79a;
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .copy-msg-btn:active { transform: scale(0.95); }
+
+        .wedding-date-front { font-size: 0.78rem; color: var(--text-gold); margin-top: 0.8rem; font-weight: 500; }
+
+        .btn-group { display: flex; gap: 10px; margin-top: auto; padding-top: 1rem; width: 100%; }
+        .btn {
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold)); 
+            color: #202020; 
+            font-weight: 600; 
+            padding: 0.75rem 1rem; 
+            border: none; 
+            border-radius: 12px; 
+            font-size: 0.85rem; 
+            cursor: pointer; 
+            text-decoration: none; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 0.5rem; 
+            width: 100%;
+        }
+        .btn-secondary { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--primary-gold); color: var(--text-gold); }
+
+        .content-container-formal { font-size: 0.82rem; color: var(--text-light); line-height: 1.8; text-align: center; }
+        .formal-title { font-family: 'Moul', cursive; color: var(--primary-gold); font-size: 1.05rem; margin-bottom: 0.8rem; }
+        .parents-block, .couple-names-block-formal { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+        .parents-side, .couple-side-formal { width: 48%; text-align: center; }
+        .parent-name { color: #bfa071; font-weight: bold; }
+        .invitation-intro { text-decoration: underline; color: var(--text-gold); margin-bottom: 0.5rem; }
+        .invitation-text { color: #cbd5e1; margin-bottom: 1rem; font-size: 0.8rem; }
+        .main-couple-name-formal { color: var(--primary-gold); font-family: 'Moul', cursive; font-size: 0.9rem; }
+        .couple-name-label { display: block; margin-bottom: 0.18rem; font-family: 'Moul', cursive; font-size: 0.72rem; }
+        .highlight-date-formal { color: var(--primary-gold); font-weight: bold; }
+
+        .agenda-divider { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 1.5rem 0 1rem; color: var(--primary-gold); font-family: 'Moul', cursive; font-size: 0.9rem; }
+        .agenda-divider::before, .agenda-divider::after { content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--primary-gold), transparent); }
+
+        .program-day-title { font-weight: 700; color: var(--primary-gold); background: rgba(220, 220, 220, 0.15); border-left: 3px solid var(--primary-gold); padding: 0.4rem 0.8rem; text-align: left; margin: 1rem 0 0.8rem; border-radius: 0 8px 8px 0; font-size: 0.82rem; }
+        .timeline { position: relative; padding-left: 1rem; text-align: left; border-left: 2px dashed rgba(220, 220, 220, 0.3); margin-left: 0.5rem; }
+        .timeline-item { position: relative; margin-bottom: 0.8rem; padding-left: 0.8rem; }
+        .timeline-item::before { content: ''; position: absolute; left: -1.35rem; top: 0.3rem; width: 8px; height: 8px; border-radius: 50%; background: var(--primary-gold); }
+        .time-badge { font-weight: bold; color: var(--text-gold); font-size: 0.78rem; display: inline-block; }
+        .event-name { color: #e2e8f0; font-size: 0.8rem; }
+
+        .photo-frame { width: 100%; height: 260px; border: 2px solid var(--primary-gold); border-radius: 16px; overflow: hidden; margin-bottom: 1rem; }
+        .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .couple-bio-block { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 1rem; }
+        .bio-side { width: 48%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 0.8rem; text-align: center; }
+        .bio-side img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid var(--primary-gold); object-fit: cover; margin-bottom: 0.5rem; }
+        .bio-side h3 { font-family: 'Moul', cursive; font-size: 0.8rem; color: var(--primary-gold); }
+
+        .page1-logo {
             position: relative;
-        }
-
-        .guest-card-box::before {
-            content: "";
-            position: absolute;
-            inset: 8px;
-            border: 1px solid rgba(184, 145, 77, .48);
-            pointer-events: none;
-        }
-
-        .guest-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #d4af37;
-            margin: 0 auto 15px;
+            width: min(230px, 62vw);
+            height: min(150px, 30vw);
+            min-height: 82px;
             display: block;
+            margin: 0 auto 1rem;
+            background: linear-gradient(180deg, #ffffff 0%, #d9d9d9 12%, #8f8f8f 27%, #f7f7f7 42%, #b8b8b8 57%, #666666 73%, #f2f2f2 88%, #ffffff 100%);
+            -webkit-mask-image: url('backgrund/logo.png');
+            mask-image: url('backgrund/logo.png');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
         }
 
-        .invite-to-text {
-            font-size: 14px;
-            color: #9a7845;
-            margin-bottom: 5px;
-            font-family: Georgia, serif;
-            letter-spacing: 1px;
-        }
+        #page4 { padding: .75rem .6rem 1rem; overflow-y: auto; }
+        #page4 .gallery-heading h3 { font-family: 'Moul', cursive; font-size: 1rem; }
+        #page4 .memory-hero .slide { width: 100%; height: clamp(260px, 48vh, 430px); margin: 0 0 18px; border-radius: 18px; overflow: hidden; background: #05070d; border: 1px solid rgba(255,255,255,.22); }
+        #page4 .memory-hero .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    </style>
 
-        .guest-name-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: #b28a45;
-            margin: 10px 0 15px;
-            font-family: 'Moul', cursive;
+    <!-- OLIVE GREEN + GOLD THEME -->
+    <style id="olive-green-gold-theme">
+        :root {
+          --olive-deep: #343d25;
+          --primary-gold: #d4af37;
+          --dark-gold: #8f6d17;
+          --border-color: rgba(212, 175, 55, .58);
+          --text-light: #f3d775;
+          --text-gold: #f7df89;
         }
-
-        .invitation-message {
-            font-size: 13px;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
+        html, body { background-color: var(--olive-deep) !important; color: var(--text-light) !important; }
+        .invitation-card {
+          background: linear-gradient(180deg, rgba(98, 100, 57, .76), rgba(62, 72, 42, .82)) padding-box,
+                      linear-gradient(135deg, #fff0ad, #d4af37, #8f6d17) border-box !important;
+          border: 3px solid transparent !important;
         }
-
-        .download-btn { background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%); }
-        .copy-btn { background: linear-gradient(135deg, #22c55e 0%, #15803d 100%); }
-        .telegram-btn { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); }
-        .copy-link-btn { background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); }
+        #page1 { background-image: linear-gradient(rgba(55, 62, 34, .70), rgba(55, 62, 34, .78)), url('/backgrund/IMG_0987.jpg') !important; background-size: cover !important; }
+        .header-title, .formal-title, .guest-label, .main-couple-name-formal, .agenda-divider, .program-day-title, .time-badge, .highlight-date-front { color: #f4d878 !important; }
+        .parent-name, .couple-name-label { color: #ffe79a !important; }
+        .btn { background: linear-gradient(135deg, #f4d878, #b8860b) !important; color: #2f351e !important; }
+        .btn-secondary { background: rgba(44,52,30,.60) !important; color: #f4d878 !important; }
+        .guest-name-inner { background: rgba(52,61,37,.90) !important; color: #fff0ad !important; }
     </style>
 </head>
 <body>
-    <div class="card" id="generatorSection">
-        <h2>បង្កើតលីងអញ្ជើញភ្ញៀវ</h2>
-        <h2 class="names">អានន្ទ & សៀង សាយជីញ</h2>
 
-        <label for="guestName">ឈ្មោះភ្ញៀវ៖</label>
-        <input type="text" id="guestName" placeholder="ឧ. លោក និង លោកស្រី សុខ សុភា">
+    <!-- Falling Petals Container -->
+    <div id="petal-container"></div>
+    <img src="/backgrund/IMG_0987.jpg" class="bg-media" alt="Background">
 
-        <button onclick="generateLink()">បង្កើតលីងអញ្ជើញ & QR Code</button>
+    <div class="invitation-card">
 
-        <div class="result-box" id="resultBox">
-            <label>លីងសម្រាប់បញ្ជូន៖</label>
-            <p id="generatedLinkText"></p>
+        <!-- Music Button -->
+        <div class="top-controls">
+            <button class="icon-btn music-btn" id="musicToggle" onclick="toggleMusic()">🎵</button>
+        </div>
 
-            <div class="qrcode-wrapper">
-                <div class="wedding-qr-card" id="weddingQrCard">
-                    <div class="qr-card-overline">WEDDING INVITATION</div>
-                    <div class="qr-card-photo-frame">
-                        <img id="qrCardPhoto" src="./cheaanonandsiengjing.jpg" alt="រូបថត អានន្ទ និង សៀង សាយជីញ" onerror="this.style.display='none';">
+        <audio id="bgMusic" loop preload="auto">
+            <source src="backgrund/wedding-song.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- PAGE 1 -->
+        <div class="page active" id="page1">
+            <div class="envelope-cover">
+                <div class="header-title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
+                <div class="sub-title">Save The Date</div>
+                
+                <div class="page1-logo-frame">
+                    <div class="page1-logo" role="img" aria-label="Wedding Logo"></div>
+                </div>
+
+                <!-- Guest Badge -->
+                <div class="guest-invitation-container">
+                    <div class="guest-label">សូមគោរពអញ្ជើញ</div>
+                    <div class="guest-name-box">
+                        <div class="guest-name-inner" id="guestName">
+                            ជូនចំពោះ លីម៉ី បោះពុម្ព
+                        </div>
                     </div>
-                    <div class="qr-card-heading">សូមស្កេន QR Code</div>
-                    <div class="qr-card-description">ដើម្បីបើកកាតអញ្ជើញមង្គលការ<br>របស់ អានន្ទ &amp; សៀង សាយជីញ</div>
-                    <div id="qrcode" class="design-qr"></div>
-                    <div class="qr-card-names">អានន្ទ <span>&amp;</span> សៀង សាយជីញ</div>
-                    <div class="qr-card-footer">សូមគោរពអញ្ជើញ និងរង់ចាំស្វាគមន៍ដោយក្តីរីករាយ</div>
+                    <!-- ប៊ូតុង Copy សារអញ្ជើញ -->
+                    <button class="copy-msg-btn" onclick="copyFullMessage()">
+                        📋 ចម្លងសារអញ្ជើញផ្ញើជូនភ្ញៀវ
+                    </button>
+                </div>
+
+                <!-- Wax Seal Button -->
+                <div class="wax-seal-btn" onclick="openInvitation()" title="ចុចទីនេះដើម្បីបើកសំបុត្រ">
+                    <span>💌</span>
+                </div>
+                <div class="envelope-instruction">ចុចលើត្រាដើម្បីបើកលិខិតអញ្ជើញ</div>
+
+                <div class="wedding-date-front">
+                    ថ្ងៃសៅរ៍ ទី១៤ ខែវិច្ឆិកា ឆ្នាំ២០២៦ វេលាម៉ោង ៥:៣០ ល្ងាច
+                    <div>ស្ថិតនៅ ផ្លូវវេទិកាមេគង្គ (ផ្លូវមាត់ទន្លេច្រោយចង្វារ)</div>
+                    <div>រាជធានីភ្នំពេញ</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div class="page" id="page2">
+            <div class="content-container-formal">
+                <div class="formal-title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
+                <div class="parents-block">
+                    <div class="parents-side">
+                        <p class="parent-name">លោក ហួយ សុខ ឃាង</p>
+                        <p class="parent-name">លោកស្រី ហួយ គឹមស្រ៊ុន</p>
+                    </div>
+                    <div class="parents-side">
+                        <p class="parent-name">លោក ធី ដេវីត</p>
+                        <p class="parent-name">លោកស្រី ឡាំ លីនណា</p>
+                    </div>
+                </div>
+               
+                <p class="invitation-intro">សូមគោរពអញ្ជើញ</p>
+                <p class="invitation-text">ឯកឧត្តម អ្នកឧកញ៉ា លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា អញ្ជើញចូលរួមជាអធិបតីភាព និងជាភ្ញៀវកិត្តិយសក្នុងកម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍កូនប្រុស កូនស្រីរបស់យើងខ្ញុំ។</p>
+                
+                <div class="couple-names-block-formal">
+                    <div class="couple-side-formal">
+                        <span class="couple-name-label">កូនប្រុសនាម</span>
+                        <p class="main-couple-name-formal">ហ៊ុន គឹមឈាន់</p>
+                    </div>
+                    <div class="couple-side-formal">
+                        <span class="couple-name-label">កូនស្រីនាម</span>
+                        <p class="main-couple-name-formal">ធី ប៉ាត់ទីម៉ា</p>
+                    </div>
+                </div>
+                
+                <div class="date-location-block-formal">
+                    <p>ដែលនឹងប្រព្រឹត្តទៅនៅ<br>
+                    <span class="highlight-date-formal">ថ្ងៃសៅរ៍ ៥កើត ខែកត្តិក ឆ្នាំមមី អដ្ឋស័ក ព.ស. ២៥៧០ ត្រូវនឹងថ្ងៃទី១៤ ខែវិច្ឆិកា ឆ្នាំ២០២៦ វេលាម៉ោង ៥:៣០ ល្ងាច</span><br>
+                    <a href="https://maps.app.goo.gl/8hAWmHVpt1sXTFc67" target="_blank" style="color: var(--primary-gold); text-decoration: underline;">ស្ថិតនៅ ផ្លូវវេទិកាមេគង្គ (ផ្លូវមាត់ទន្លេច្រោយចង្វារ) រាជធានីភ្នំពេញ</a></p>
+                </div>
+
+                <div class="agenda-divider">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
+                <div class="program-day-title">កម្មវិធីថ្ងៃទី១៖ ថ្ងៃសៅរ៍ ទី១៤ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
+                <div class="timeline">
+                    <div class="timeline-item"><div class="time-badge">ម៉ោង ០៦:៣០ ព្រឹក</div><div class="event-name">ជួបជុំភ្ញៀវកិត្តិយសដើម្បីរៀបចំពិធីហែជំនួន</div></div>
+                    <div class="timeline-item"><div class="time-badge">ម៉ោង ០៧:១៥ ព្រឹក</div><div class="event-name">ពិធីហែកំណត់ (ហែជំនួន) ចូលរោងជ័យ</div></div>
+                    <div class="timeline-item"><div class="time-badge">ម៉ោង ០៧:៣០ ព្រឹក</div><div class="event-name">ពិធីច្រៀងរៀបរាប់ផ្លែឈើ</div></div>
+                    <div class="timeline-item"><div class="time-badge">ម៉ោង ០៨:១៥ ព្រឹក</div><div class="event-name">ពិធីបំពាក់គ្រឿងអលង្ការ</div></div>
+                    <div class="timeline-item"><div class="time-badge">ម៉ោង ០៥:៣០ ល្ងាច</div><div class="event-name">ទទួលបដិសណ្ឋារកិច្ចភ្ញៀវកិត្តិយសពិសាអាហារ ពេលល្ងាច</div></div>
                 </div>
             </div>
 
-            <button class="download-btn" onclick="downloadQRCode()">📥 ទាញយក QR Card រចនាស្អាត (PNG)</button>
-            <button class="copy-btn" onclick="copyFullMessage()">📋 ចម្លងសារអញ្ជើញ (Copy)</button>
-            <button class="telegram-btn" onclick="shareToTelegram()">✈️ ផ្ញើចូល Telegram ផ្ទាល់</button>
-            <button class="copy-link-btn" onclick="copyLinkOnly()">🔗 ចម្លងតែលីង សម្រាប់ Messenger</button>
-        </div>
-    </div>
-
-    <div class="card" id="guestInvitationSection">
-        <div class="guest-card-box">
-            <div class="invite-to-text">WEDDING INVITATION</div>
-            <img src="./cheaanonandsiengjing.jpg" alt="Anan and Sieng Saijing Wedding Photo" class="guest-photo" onerror="this.style.display='none';">
-
-            <h2 class="names" style="color: #6b5330; font-size: 16px; margin-bottom: 10px;">អានន្ទ & សៀង សាយជីញ</h2>
-            <div style="font-size: 12px; color: #8f713f; margin-bottom: 10px;">សូមគោរពអញ្ជើញ</div>
-
-            <div class="guest-name-title" id="displayGuestName">ភ្ញៀវកិត្តិយស</div>
-
-            <div class="invitation-message">
-                ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️
-            </div>
-
-            <div class="qr-card-footer" style="margin-top: 15px; border-top: 1px dashed #dfc99f; padding-top: 10px;">
-                សូមអរគុណ និងរង់ចាំស្វាគមន៍ដោយក្តីរីករាយ!
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="goToPage(1)">⬅ ថយក្រោយ</button>
+                <button class="btn" onclick="goToPage(3)">បន្ត ➔</button>
             </div>
         </div>
+
+        <!-- PAGE 3 -->
+        <div class="page" id="page3">
+            <div class="photo-frame">
+                <img id="mainCoupleImg" src="/backgrund/5.jpg" alt="Couple Main Photo">
+            </div>
+            <div class="couple-bio-block">
+                <div class="bio-side">
+                    <img src="/backgrund/6.jpg" alt="Groom">
+                    <h3>ហ៊ុន គឹមឈាន់</h3>
+                    <p>កូនកំលោះ</p>
+                </div>
+                <div class="bio-side">
+                    <img src="backgrund/IMG_1020.jpg" alt="Bride">
+                    <h3>ធី ប៉ាត់ទីម៉ា</h3>
+                    <p>កូនក្រមុំ</p>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="goToPage(2)">⬅ ថយក្រោយ</button>
+                <button class="btn" onclick="goToPage(4)">មើលរូបថត 📷</button>
+            </div>
+        </div>
+
+        <!-- PAGE 4 -->
+        <div class="page" id="page4">
+            <div class="gallery-heading">
+                <h3>អាល់ប៊ុមរូបភាពអនុស្សាវរីយ៍</h3>
+            </div>
+            <div class="memory-hero">
+                <div class="slide"><img src="/backgrund/3.jpg" alt="រូបទី 1"></div>
+                <div class="slide"><img src="/backgrund/4.jpg" alt="រូបទី 2"></div>
+                <div class="slide"><img src="/backgrund/5.jpg" alt="រូបទី 3"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="goToPage(3)">⬅ ថយក្រោយ</button>
+            </div>
+        </div>
+
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
+    <!-- JavaScript code functionality -->
     <script>
-        let actualLinkToCopy = "";
-        let encodedQrLink = "";
-        let currentGuestName = "";
-        let qrCodeObj = null;
-        const SITE_URL = "https://hunkimchhornthyphathy2026.pages.dev";
+        let currentGuestName = "ភ្ញៀវកិត្តិយស";
 
-        // ពេលបើកចូលលីងដែលមាន ?to= វានឹងទាញយកឈ្មោះបង្ហាញលើកាតស្វ័យប្រវត្តិ
-        window.addEventListener('DOMContentLoaded', () => {
+        // មុខងារអានឈ្មោះភ្ញៀវ និងសម្រួលទម្រង់ Link ឱ្យខ្លីស្អាតដោយស្វ័យប្រវត្តិ
+        (function setGuestNameFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
-            const guestName = urlParams.get('to');
+            const guestParam = urlParams.get('to');
+            const pathName = decodeURIComponent(window.location.pathname.substring(1)).trim();
 
-            if (guestName && guestName.trim()) {
-                const trimmedName = guestName.trim();
-                document.getElementById('generatorSection').style.display = 'none';
-                document.getElementById('guestInvitationSection').style.display = 'block';
-                document.getElementById('displayGuestName').innerText = trimmedName;
-
-                // ប្តូរ Meta Tags ស្វ័យប្រវត្តិសម្រាប់ Telegram / Messenger Preview
-                document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${trimmedName}`;
-                
-                let ogTitle = document.querySelector('meta[property="og:title"]');
-                if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName}`);
-
-                let ogDesc = document.querySelector('meta[property="og:description"]');
-                if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
-
-                let twTitle = document.querySelector('meta[name="twitter:title"]');
-                if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName}`);
-
-                let twDesc = document.querySelector('meta[name="twitter:description"]');
-                if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
-            }
-        });
-
-        // បង្កើតលីងអញ្ជើញទម្រង់ ?to= និង QR Code
-        function generateLink() {
-            const guestInput = document.getElementById('guestName');
-            const name = guestInput.value.trim();
-
-            if (!name) {
-                alert("សូមវាយបញ្ចូលឈ្មោះភ្ញៀវក្នុងប្រអប់ជាមុនសិន!");
-                guestInput.focus();
-                return;
+            if (guestParam && guestParam.trim()) {
+                currentGuestName = guestParam.trim();
+            } else if (pathName && pathName !== "index.html") {
+                currentGuestName = pathName;
             }
 
-            currentGuestName = name;
-            actualLinkToCopy = `${SITE_URL}/?to=${encodeURIComponent(name)}`;
-            encodedQrLink = actualLinkToCopy;
-
-            document.getElementById('generatedLinkText').innerText = actualLinkToCopy;
-            document.getElementById('resultBox').style.display = 'block';
-
-            const qrcodeContainer = document.getElementById('qrcode');
-            qrcodeContainer.innerHTML = '';
-            try {
-                qrCodeObj = new QRCode(qrcodeContainer, {
-                    text: encodedQrLink,
-                    width: 170,
-                    height: 170,
-                    colorDark: '#000000',
-                    colorLight: '#ffffff',
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            } catch (error) {
-                qrcodeContainer.innerHTML = '<p style="color:red; font-size:12px;">មិនអាចបង្កើត QR បានទេ</p>';
-            }
-        }
-
-        async function downloadQRCode() {
-            const qrcodeDiv = document.getElementById('qrcode');
-            const qrCanvas = qrcodeDiv.querySelector('canvas');
-            const qrImg = qrcodeDiv.querySelector('img');
-            const qrSource = qrCanvas || qrImg;
-
-            if (!qrSource) {
-                alert('សូមចុចបង្កើតលីងអញ្ជើញជាមុនសិន!');
-                return;
+            // បង្ហាញឈ្មោះភ្ញៀវលើធៀប
+            const guestEl = document.getElementById('guestName');
+            if (guestEl && currentGuestName) {
+                guestEl.textContent = `ជូនចំពោះ ${currentGuestName}`;
             }
 
-            const W = 760, H = 1320;
-            const canvas = document.createElement('canvas');
-            canvas.width = W;
-            canvas.height = H;
-            const ctx = canvas.getContext('2d');
-
-            ctx.fillStyle = '#ead9bd';
-            ctx.fillRect(0, 0, W, H);
-            ctx.fillStyle = '#fffdf8';
-            ctx.fillRect(28, 28, W - 56, H - 56);
-            ctx.strokeStyle = '#c7a76f';
-            ctx.lineWidth = 2;
-            ctx.strokeRect(44, 44, W - 88, H - 88);
-
-            ctx.textAlign = 'center';
-            ctx.fillStyle = '#9a7845';
-            ctx.font = '22px Georgia, serif';
-            ctx.fillText('W E D D I N G    I N V I T A T I O N', W / 2, 100);
-
-            const photo = document.getElementById('qrCardPhoto');
-            const px = 105, py = 132, pw = 550, ph = 400;
-            ctx.fillStyle = '#f1e6d4';
-            ctx.fillRect(px - 8, py - 8, pw + 16, ph + 16);
-            if (photo && photo.complete && photo.naturalWidth > 0) {
-                ctx.drawImage(photo, px, py, pw, ph);
+            // លុបសញ្ញា ?to= ចេញពីរបារអាសយដ្ឋាន (URL Bar) ឱ្យមើលទៅខ្លីស្អាតស្វ័យប្រវត្តិ
+            if (guestParam && window.history.replaceState) {
+                const cleanURL = window.location.origin + '/' + encodeURIComponent(currentGuestName);
+                window.history.replaceState(null, '', cleanURL);
             }
+        })();
 
-            ctx.fillStyle = '#5f4b32';
-            ctx.font = 'bold 32px sans-serif';
-            ctx.fillText('សូមស្កេន QR Code', W / 2, 600);
-            ctx.fillStyle = '#6e675c';
-            ctx.font = '22px sans-serif';
-            ctx.fillText('ដើម្បីបើកកាតអញ្ជើញមង្គលការ', W / 2, 642);
-            ctx.fillText('របស់ អានន្ទ & សៀង សាយជីញ', W / 2, 676);
-
-            const qrSize = 300, qx = (W - qrSize) / 2, qy = 710;
-            ctx.fillStyle = '#ffffff';
-            ctx.fillRect(qx - 14, qy - 14, qrSize + 28, qrSize + 28);
-            ctx.strokeStyle = '#e8dfcf';
-            ctx.lineWidth = 2;
-            ctx.strokeRect(qx - 14, qy - 14, qrSize + 28, qrSize + 28);
-            try { ctx.drawImage(qrSource, qx, qy, qrSize, qrSize); } catch (e) {}
-
-            ctx.textAlign = 'center';
-            ctx.fillStyle = '#6b5330';
-            ctx.font = 'bold 27px sans-serif';
-            ctx.fillText('អានន្ទ  &  សៀង សាយជីញ', W / 2, 1090);
-            ctx.fillStyle = '#918473';
-            ctx.font = '20px sans-serif';
-            ctx.fillText('សូមគោរពអញ្ជើញ និងរង់ចាំស្វាគមន៍ដោយក្តីរីករាយ', W / 2, 1140);
-
-            try {
-                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-                if (!blob) throw new Error('png-export-failed');
-                const imageUrl = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                const safeGuestName = currentGuestName ? currentGuestName.replace(/[^a-zA-Z0-9ក-អ]/g, '_') : 'guest';
-                link.href = imageUrl;
-                link.download = `Wedding_QR_Card_${safeGuestName}.png`;
-                document.body.appendChild(link);
-                link.click();
-                link.remove();
-                URL.revokeObjectURL(imageUrl);
-            } catch (error) {
-                alert('មិនអាចទាញយកកាតជា PNG បានទេ។');
-            }
-        }
-
+        // មុខងារសម្រាប់ Copy សារអញ្ជើញយ៉ាងរៀបរយ
         function copyFullMessage() {
-            if (!actualLinkToCopy || !currentGuestName) return;
-            const fullText = `អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ 💍\nសូមគោរពអញ្ជើញ ${currentGuestName} ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️\n\n🔗 សូមចុចទីនេះដើម្បីបើកកាតអញ្ជើញ៖\n${actualLinkToCopy}`;
+            if (!currentGuestName) return;
 
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(fullText).then(() => {
-                    alert('បានចម្លងសារអញ្ជើញរួចរាល់! 📋');
-                }).catch(() => fallbackCopyText(fullText));
+            const cleanShareLink = window.location.origin + '/' + encodeURIComponent(currentGuestName);
+            const textToCopy = `សិរីមង្គលអាពាហ៍ពិពាហ៍ ហ៊ុន គឹមឈាន់ & ធី ប៉ាត់ទីម៉ា 💍\n\nសូមគោរពអញ្ជើញ ${currentGuestName} ចូលរួមជាអធិបតីភាព និងជាភ្ញៀវកិត្តិយសក្នុងកម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍របស់យើងខ្ញុំ។\n\n🔗 សូមចុចទីនេះដើម្បីមើលលិខិតអញ្ជើញឌីជីថល៖\n${cleanShareLink}`;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert(`បាន Copy សារអញ្ជើញសម្រាប់ "${currentGuestName}" រួចរាល់! អ្នកអាចយកទៅ Paste ផ្ញើតាម Telegram ឬ Messenger បានភ្លាមៗ។`);
+            }).catch(err => {
+                alert('កំហុសក្នុងការ Copy សូមសាកល្បងម្តងទៀត');
+            });
+        }
+
+        // Falling Petals
+        function createPetals() {
+            const container = document.getElementById('petal-container');
+            if(!container) return;
+            for (let i = 0; i < 15; i++) {
+                const petal = document.createElement('div');
+                petal.classList.add('petal');
+                petal.style.left = Math.random() * 100 + 'vw';
+                petal.style.top = -10 + 'vh';
+                const size = Math.random() * 10 + 10;
+                petal.style.width = size + 'px';
+                petal.style.height = size * 1.4 + 'px';
+                petal.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                container.appendChild(petal);
+            }
+        }
+        createPetals();
+
+        // Navigation
+        function goToPage(pageNumber) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            const target = document.getElementById('page' + pageNumber);
+            if(target) target.classList.add('active');
+        }
+
+        function openInvitation() {
+            playMusic();
+            goToPage(2);
+        }
+
+        // Music
+        const music = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                musicToggle.innerHTML = '🎵';
+                isPlaying = false;
             } else {
-                fallbackCopyText(fullText);
+                music.play().then(() => {
+                    musicToggle.innerHTML = '🔊';
+                    isPlaying = true;
+                });
             }
         }
 
-        function fallbackCopyText(text) {
-            const textArea = document.createElement('textarea');
-            textArea.value = text;
-            document.body.appendChild(textArea);
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                alert('បានចម្លងសារអញ្ជើញរួចរាល់! 📋');
-            } catch (err) {
-                alert('សូមអភ័យទោស ការចម្លងមិនបានសម្រេច។');
-            }
-            document.body.removeChild(textArea);
-        }
-
-        function shareToTelegram() {
-            if (!actualLinkToCopy || !currentGuestName) return;
-            const fullText = `អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ 💍\nសូមគោរពអញ្ជើញ ${currentGuestName} ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️\n\n🔗 សូមចុចទីនេះដើម្បីបើកកាតអញ្ជើញ៖\n${actualLinkToCopy}`;
-            const telegramUrl = `https://t.me/share/url?text=${encodeURIComponent(fullText)}`;
-            window.open(telegramUrl, '_blank', 'noopener,noreferrer');
-        }
-
-        function copyLinkOnly() {
-            if (!actualLinkToCopy) {
-                alert('សូមបង្កើតលីងអញ្ជើញជាមុនសិន!');
-                return;
-            }
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(actualLinkToCopy).then(() => {
-                    alert('បានចម្លងតែលីងអញ្ជើញរួចរាល់! សូមចូល Messenger ហើយ Paste។');
-                }).catch(() => fallbackCopyText(actualLinkToCopy));
-            } else {
-                fallbackCopyText(actualLinkToCopy);
+        function playMusic() {
+            if (!isPlaying && music) {
+                music.play().then(() => {
+                    if(musicToggle) musicToggle.innerHTML = '🔊';
+                    isPlaying = true;
+                }).catch(e => console.log("Audio play blocked"));
             }
         }
     </script>
