@@ -7,7 +7,7 @@
     <!-- Open Graph Meta Tags for Telegram/Messenger Preview -->
     <meta property="og:title" content="អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ 💍">
     <meta property="og:description" content="សូមគោរពអញ្ជើញភ្ញៀវកិត្តិយស ចូលរួមជាអធិបតី និងប្រសិទ្ធពរជ័យក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
-    <meta property="og:image" content="https://hunkimchhornthyphathy2026.pages.dev/cheaanonandsiengjing.jpg">
+    <meta property="og:image" content="https://hunkimchhornthyphathy2026.pages.dev/hunkimchhornandthyphathyma.jpg">
     <meta property="og:url" content="https://hunkimchhornthyphathy2026.pages.dev/">
     <meta property="og:type" content="website">
 
@@ -17,7 +17,7 @@
 
         body {
             font-family: 'Kantumruy Pro', 'Khmer OS Siemreap', sans-serif;
-            background: #808080 url('./cheaanonandsiengjing.jpg') no-repeat center center fixed;
+            background: #808080 url('./hunkimchhornandthyphathyma.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -319,7 +319,7 @@
                 <div class="wedding-qr-card" id="weddingQrCard">
                     <div class="qr-card-overline">WEDDING INVITATION</div>
                     <div class="qr-card-photo-frame">
-                        <img id="qrCardPhoto" src="./cheaanonandsiengjing.jpg" alt="រូបថត អានន្ទ និង សៀង សាយជីញ" onerror="this.style.display='none';">
+                        <img id="qrCardPhoto" src="/hunkimchhornandthyphathyma.jpg" alt="រូបថត អានន្ទ និង សៀង សាយជីញ" onerror="this.style.display='none';">
                     </div>
                     <div class="qr-card-heading">សូមស្កេន QR Code</div>
                     <div class="qr-card-description">ដើម្បីបើកកាតអញ្ជើញមង្គលការ<br>របស់ អានន្ទ &amp; សៀង សាយជីញ</div>
@@ -339,7 +339,7 @@
     <div class="card" id="guestInvitationSection">
         <div class="guest-card-box">
             <div class="invite-to-text">WEDDING INVITATION</div>
-            <img src="./cheaanonandsiengjing.jpg" alt="Anan and Sieng Saijing Wedding Photo" class="guest-photo" onerror="this.style.display='none';">
+            <img src="/hunkimchhornandthyphathyma.jpg" alt="Anan and Sieng Saijing Wedding Photo" class="guest-photo" onerror="this.style.display='none';">
 
             <h2 class="names" style="color: #6b5330; font-size: 16px; margin-bottom: 10px;">អានន្ទ & សៀង សាយជីញ</h2>
             <div style="font-size: 12px; color: #8f713f; margin-bottom: 10px;">សូមគោរពអញ្ជើញ</div>
@@ -365,42 +365,35 @@
         let qrCodeObj = null;
         const SITE_URL = "https://hunkimchhornthyphathy2026.pages.dev";
 
-        function safeEncode(str) {
-            return encodeURIComponent(str);
-        }
-
-        function safeDecode(str) {
-            try {
-                return decodeURIComponent(str);
-            } catch (e) {
-                return str;
-            }
-        }
-
-        window.addEventListener('DOMContentLoaded', async () => {
+        // ពេលបើកចូលលីងដែលមាន ?to= វានឹងទាញយកឈ្មោះបង្ហាញលើកាតស្វ័យប្រវត្តិ
+        window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const id = urlParams.get('i');
-            const legacyName = urlParams.get('to');
+            const guestName = urlParams.get('to');
 
-            if (id) {
+            if (guestName && guestName.trim()) {
+                const trimmedName = guestName.trim();
                 document.getElementById('generatorSection').style.display = 'none';
                 document.getElementById('guestInvitationSection').style.display = 'block';
-                document.getElementById('displayGuestName').innerText = 'កំពុងបើកកាតអញ្ជើញ...';
-                try {
-                    const response = await fetch(`/api/invitations/${encodeURIComponent(id)}`);
-                    if (!response.ok) throw new Error('not-found');
-                    const data = await response.json();
-                    document.getElementById('displayGuestName').innerText = data.name || 'ភ្ញៀវកិត្តិយស';
-                } catch (error) {
-                    document.getElementById('displayGuestName').innerText = 'រកមិនឃើញកាតអញ្ជើញនេះទេ';
-                }
-            } else if (legacyName) {
-                document.getElementById('generatorSection').style.display = 'none';
-                document.getElementById('guestInvitationSection').style.display = 'block';
-                document.getElementById('displayGuestName').innerText = legacyName;
+                document.getElementById('displayGuestName').innerText = trimmedName;
+
+                // ប្តូរ Meta Tags ស្វ័យប្រវត្តិសម្រាប់ Telegram / Messenger Preview
+                document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${trimmedName}`;
+                
+                let ogTitle = document.querySelector('meta[property="og:title"]');
+                if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName}`);
+
+                let ogDesc = document.querySelector('meta[property="og:description"]');
+                if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+
+                let twTitle = document.querySelector('meta[name="twitter:title"]');
+                if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName}`);
+
+                let twDesc = document.querySelector('meta[name="twitter:description"]');
+                if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
             }
         });
 
+        // បង្កើតលីងអញ្ជើញទម្រង់ ?to= និង QR Code
         function generateLink() {
             const guestInput = document.getElementById('guestName');
             const name = guestInput.value.trim();
@@ -412,8 +405,6 @@
             }
 
             currentGuestName = name;
-
-            // ប្រើ query parameter ?to= ដោយផ្ទាល់ មិនចាំបាច់ប្រើ Workers KV
             actualLinkToCopy = `${SITE_URL}/?to=${encodeURIComponent(name)}`;
             encodedQrLink = actualLinkToCopy;
 
@@ -464,7 +455,7 @@
             ctx.textAlign = 'center';
             ctx.fillStyle = '#9a7845';
             ctx.font = '22px Georgia, serif';
-            ctx.fillText('W E D D I N G   I N V I T A T I O N', W / 2, 100);
+            ctx.fillText('W E D D I N G    I N V I T A T I O N', W / 2, 100);
 
             const photo = document.getElementById('qrCardPhoto');
             const px = 105, py = 132, pw = 550, ph = 400;
@@ -565,4 +556,3 @@
     </script>
 </body>
 </html>
-    
