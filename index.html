@@ -401,7 +401,7 @@
             }
         });
 
-        function generateLink() {
+        async function generateLink() {
             const guestInput = document.getElementById('guestName');
             const name = guestInput.value.trim();
 
@@ -412,9 +412,24 @@
             }
 
             currentGuestName = name;
+            let response;
+            try {
+                response = await fetch('/api/invitations', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name })
+                });
+            } catch (error) {
+                alert('មិនអាចភ្ជាប់ទៅប្រព័ន្ធបានទេ។ សូមពិនិត្យថាបានបន្ថែម _worker.js និងភ្ជាប់ KV namespace ជា INVITATIONS រួចហើយ។');
+                return;
+            }
+            if (!response.ok) {
+                alert('មិនអាចរក្សាទុកឈ្មោះភ្ញៀវបានទេ។ សូមពិនិត្យការកំណត់ KV namespace INVITATIONS។');
+                return;
+            }
 
-            // ប្រើ query parameter ?to= ដោយផ្ទាល់ មិនចាំបាច់ប្រើ Workers KV
-            actualLinkToCopy = `${SITE_URL}/?to=${encodeURIComponent(name)}`;
+            const saved = await response.json();
+            actualLinkToCopy = `${SITE_URL}/?i=${encodeURIComponent(saved.id)}`;
             encodedQrLink = actualLinkToCopy;
 
             document.getElementById('generatedLinkText').innerText = actualLinkToCopy;
