@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>អាពាហ៍ពិពាហ៍ ហ៊ុន គឹមឈាន់ & ធី ប៉ាត់ទីម៉ា</title>
-    <!-- Open Graph Meta Tags for Telegram/Messenger Preview -->
-    <meta property="og:title" content="អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ 💍">
-    <meta property="og:description" content="សូមគោរពអញ្ជើញភ្ញៀវកិត្តិយស ចូលរួមជាអធិបតី និងប្រសិទ្ធពរជ័យក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
-    <meta property="og:image" content="https://hunkimchhornthyphathy2026.pages.dev/hunkimchhornandthyphathyma.jpg">
-    <meta property="og:url" content="https://hunkimchhornthyphathy2026.pages.dev/">
-    <meta property="og:type" content="website">
-
+    <title>ប្រព័ន្ធបង្កើតលីងអញ្ជើញស្វ័យប្រវត្តិ</title>
+    <!-- QR library is loaded on demand with a fallback source. -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
 
-        body {
-            font-family: 'Kantumruy Pro', 'Khmer OS Siemreap', sans-serif;
-            background: #808080 url('./hunkimchhornandthyphathyma.jpg') no-repeat center center fixed;
+        body { 
+            font-family: 'Kantumruy Pro', 'Khmer OS Siemreap', sans-serif; 
+            background: #808080 url('./hunkimchheanandthypattima.jpg') no-repeat center center fixed; 
             background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
             position: relative;
         }
 
@@ -31,28 +24,28 @@
             content: "";
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.55);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
 
-        .card {
+        .card { 
             position: relative;
             z-index: 2;
-            background: rgba(20, 24, 33, 0.94);
+            background: rgba(20, 24, 33, 0.92); 
             backdrop-filter: blur(12px);
             padding: 35px 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-            width: 100%;
-            max-width: 450px;
+            border-radius: 20px; 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); 
+            width: 100%; 
+            max-width: 450px; 
             box-sizing: border-box;
             border: 1px solid rgba(212, 175, 55, 0.4);
         }
 
-        h2 {
-            color: #f4d878;
-            text-align: center;
-            margin-bottom: 10px;
+        h2 { 
+            color: #f4d878; 
+            text-align: center; 
+            margin-bottom: 10px; 
             font-size: 22px;
             font-weight: 700;
         }
@@ -62,25 +55,24 @@
             margin-bottom: 25px;
             color: #d4af37;
             font-family: 'Moul', cursive;
-            text-align: center;
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #f7dc82;
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 600; 
+            color: #f7dc82; 
             font-size: 14px;
         }
 
-        input[type="text"] {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 20px;
-            border: 1px solid #d4af37;
-            border-radius: 10px;
-            font-size: 15px;
-            box-sizing: border-box;
+        input[type="text"] { 
+            width: 100%; 
+            padding: 14px; 
+            margin-bottom: 20px; 
+            border: 1px solid #d4af37; 
+            border-radius: 10px; 
+            font-size: 15px; 
+            box-sizing: border-box; 
             background: rgba(255, 255, 255, 0.9);
             color: #111;
             font-family: 'Kantumruy Pro', sans-serif;
@@ -92,16 +84,16 @@
             box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
         }
 
-        button {
+        button { 
             background: linear-gradient(135deg, #d4af37 0%, #8a6508 100%);
-            color: #fff;
-            border: none;
-            padding: 14px;
-            width: 100%;
-            font-size: 15px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
+            color: #fff; 
+            border: none; 
+            padding: 14px; 
+            width: 100%; 
+            font-size: 15px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            font-weight: 600; 
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
             margin-bottom: 10px;
             font-family: 'Kantumruy Pro', sans-serif;
@@ -111,18 +103,18 @@
         button:hover { opacity: 0.92; filter: brightness(1.08); }
         button:active { transform: scale(0.98); }
 
-        .result-box {
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px dashed rgba(212, 175, 55, 0.5);
-            display: none;
+        .result-box { 
+            margin-top: 20px; 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 15px; 
+            border-radius: 12px; 
+            border: 1px dashed rgba(212, 175, 55, 0.5); 
+            display: none; 
         }
 
         #generatedLinkText {
-            color: #93c5fd;
-            font-size: 12px;
+            color: #93c5fd; 
+            font-size: 12px; 
             margin: 0 0 15px 0;
             padding: 10px;
             background: rgba(0, 0, 0, 0.3);
@@ -164,6 +156,8 @@
         }
 
         .qr-card-overline {
+            position: relative;
+            z-index: 1;
             color: #9a7845;
             font-size: 11px;
             letter-spacing: 2.2px;
@@ -172,6 +166,8 @@
         }
 
         .qr-card-photo-frame {
+            position: relative;
+            z-index: 1;
             width: 100%;
             height: 150px;
             margin: 0 auto 17px;
@@ -188,7 +184,24 @@
             display: block;
         }
 
+        .qr-photo-fallback {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            color: #8f713f;
+            background: #f3eadb;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
         .qr-card-heading {
+            position: relative;
+            z-index: 1;
             color: #5f4b32;
             font-weight: 700;
             font-size: 17px;
@@ -196,6 +209,8 @@
         }
 
         .qr-card-description {
+            position: relative;
+            z-index: 1;
             color: #6e675c;
             font-size: 11px;
             line-height: 1.75;
@@ -203,6 +218,8 @@
         }
 
         .design-qr {
+            position: relative;
+            z-index: 1;
             width: 174px;
             min-height: 174px;
             margin: 0 auto 13px;
@@ -219,9 +236,12 @@
             max-width: 100%;
             height: auto;
             display: block;
+            image-rendering: pixelated;
         }
 
         .qr-card-names {
+            position: relative;
+            z-index: 1;
             color: #6b5330;
             font-size: 15px;
             line-height: 1.6;
@@ -232,99 +252,72 @@
         .qr-card-names span { color: #b28a45; padding: 0 3px; }
 
         .qr-card-footer {
+            position: relative;
+            z-index: 1;
             font-size: 10px;
             color: #918473;
             line-height: 1.6;
             margin-top: 5px;
         }
 
-        #guestInvitationSection {
-            display: none;
-            text-align: center;
-            color: #fff;
+        .copy-btn { 
+            background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
         }
 
-        .guest-card-box {
-            background: #fffdf8;
-            color: #35312c;
-            padding: 25px 20px;
-            border-radius: 15px;
-            border: 1px solid #dfc99f;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            position: relative;
+        .telegram-btn {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
         }
 
-        .guest-card-box::before {
-            content: "";
-            position: absolute;
-            inset: 8px;
-            border: 1px solid rgba(184, 145, 77, .48);
-            pointer-events: none;
+        .messenger-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
         }
 
-        .guest-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #d4af37;
-            margin: 0 auto 15px;
-            display: block;
+        .copy-link-btn {
+            background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+            box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
         }
 
-        .invite-to-text {
-            font-size: 14px;
-            color: #9a7845;
-            margin-bottom: 5px;
-            font-family: Georgia, serif;
-            letter-spacing: 1px;
+        @media (max-width: 380px) {
+            .wedding-qr-card { padding: 16px 14px 18px; }
+            .qr-card-photo-frame { height: 135px; }
+            .design-qr { width: 164px; min-height: 164px; }
         }
-
-        .guest-name-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: #b28a45;
-            margin: 10px 0 15px;
-            font-family: 'Moul', cursive;
-        }
-
-        .invitation-message {
-            font-size: 13px;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .download-btn { background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%); }
-        .copy-btn { background: linear-gradient(135deg, #22c55e 0%, #15803d 100%); }
-        .telegram-btn { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); }
-        .copy-link-btn { background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); }
     </style>
 </head>
 <body>
-    <div class="card" id="generatorSection">
-        <h2>បង្កើតលីងអញ្ជើញភ្ញៀវ</h2>
-        <h2 class="names">អានន្ទ & សៀង សាយជីញ</h2>
 
+    <div class="card">
+        <h2>បង្កើតលីងអញ្ជើញភ្ញៀវ</h2>
+        <h2 class="names">ហ៊ុន គឹមឈាន់ & ធី ប៉ាត់ទីម៉ា</h2>
+        
         <label for="guestName">ឈ្មោះភ្ញៀវ៖</label>
         <input type="text" id="guestName" placeholder="ឧ. លោក និង លោកស្រី សុខ សុភា">
-
+        
         <button onclick="generateLink()">បង្កើតលីងអញ្ជើញ & QR Code</button>
 
         <div class="result-box" id="resultBox">
             <label>លីងសម្រាប់បញ្ជូន៖</label>
             <p id="generatedLinkText"></p>
-
+            
             <div class="qrcode-wrapper">
                 <div class="wedding-qr-card" id="weddingQrCard">
                     <div class="qr-card-overline">WEDDING INVITATION</div>
                     <div class="qr-card-photo-frame">
-                        <img id="qrCardPhoto" src="/hunkimchhornandthyphathyma.jpg" alt="រូបថត អានន្ទ និង សៀង សាយជីញ" onerror="this.style.display='none';">
+                        <img id="qrCardPhoto" src="./hunkimchheanandthypattima.jpg" alt="រូបថតគូស្វាមីភរិយា" onerror="this.style.display='none'; document.getElementById('qrPhotoFallback').style.display='flex';">
+                        <div id="qrPhotoFallback" class="qr-photo-fallback">💍<br>ហ៊ុន គឹមឈាន់ &amp; ធី ប៉ាត់ទីម៉ា</div>
                     </div>
                     <div class="qr-card-heading">សូមស្កេន QR Code</div>
-                    <div class="qr-card-description">ដើម្បីបើកកាតអញ្ជើញមង្គលការ<br>របស់ អានន្ទ &amp; សៀង សាយជីញ</div>
+                    <div class="qr-card-description">ដើម្បីបើកកាតអញ្ជើញមង្គលការ<br>របស់ ហ៊ុន គឹមឈាន់ &amp; ធី ប៉ាត់ទីម៉ា</div>
                     <div id="qrcode" class="design-qr"></div>
-                    <div class="qr-card-names">អានន្ទ <span>&amp;</span> សៀង សាយជីញ</div>
+                    <div class="qr-card-names">ហ៊ុន គឹមឈាន់ <span>&amp;</span> ធី ប៉ាត់ទីម៉ា</div>
                     <div class="qr-card-footer">សូមគោរពអញ្ជើញ និងរង់ចាំស្វាគមន៍ដោយក្តីរីករាយ</div>
                 </div>
             </div>
@@ -332,69 +325,68 @@
             <button class="download-btn" onclick="downloadQRCode()">📥 ទាញយក QR Card រចនាស្អាត (PNG)</button>
             <button class="copy-btn" onclick="copyFullMessage()">📋 ចម្លងសារអញ្ជើញ (Copy)</button>
             <button class="telegram-btn" onclick="shareToTelegram()">✈️ ផ្ញើចូល Telegram ផ្ទាល់</button>
+            <button class="messenger-btn" onclick="shareToMessenger()">💬 ផ្ញើចូល Messenger (Copy រួច Paste)</button>
             <button class="copy-link-btn" onclick="copyLinkOnly()">🔗 ចម្លងតែលីង សម្រាប់ Messenger</button>
         </div>
     </div>
 
-    <div class="card" id="guestInvitationSection">
-        <div class="guest-card-box">
-            <div class="invite-to-text">WEDDING INVITATION</div>
-            <img src="/hunkimchhornandthyphathyma.jpg" alt="Anan and Sieng Saijing Wedding Photo" class="guest-photo" onerror="this.style.display='none';">
-
-            <h2 class="names" style="color: #6b5330; font-size: 16px; margin-bottom: 10px;">អានន្ទ & សៀង សាយជីញ</h2>
-            <div style="font-size: 12px; color: #8f713f; margin-bottom: 10px;">សូមគោរពអញ្ជើញ</div>
-
-            <div class="guest-name-title" id="displayGuestName">ភ្ញៀវកិត្តិយស</div>
-
-            <div class="invitation-message">
-                ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️
-            </div>
-
-            <div class="qr-card-footer" style="margin-top: 15px; border-top: 1px dashed #dfc99f; padding-top: 10px;">
-                សូមអរគុណ និងរង់ចាំស្វាគមន៍ដោយក្តីរីករាយ!
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
     <script>
-        let actualLinkToCopy = "";
-        let encodedQrLink = "";
+        let actualLinkToCopy = ""; 
+        let encodedQrLink = "";    
         let currentGuestName = "";
         let qrCodeObj = null;
-        const SITE_URL = "https://hunkimchhornthyphathy2026.pages.dev";
+        let qrLibraryPromise = null;
 
-        // ពេលបើកចូលលីងដែលមាន ?to= វានឹងទាញយកឈ្មោះបង្ហាញលើកាតស្វ័យប្រវត្តិ
-        window.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const guestName = urlParams.get('to');
+        function loadQRCodeLibrary() {
+            if (typeof QRCode !== "undefined") return Promise.resolve(true);
+            if (qrLibraryPromise) return qrLibraryPromise;
 
-            if (guestName && guestName.trim()) {
-                const trimmedName = guestName.trim();
-                document.getElementById('generatorSection').style.display = 'none';
-                document.getElementById('guestInvitationSection').style.display = 'block';
-                document.getElementById('displayGuestName').innerText = trimmedName;
+            qrLibraryPromise = (async () => {
+                const sources = [
+                    "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js",
+                    "https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"
+                ];
+                for (const src of sources) {
+                    try {
+                        await new Promise((resolve, reject) => {
+                            const script = document.createElement("script");
+                            script.src = src;
+                            script.async = true;
+                            script.onload = resolve;
+                            script.onerror = () => reject(new Error("QR library failed to load"));
+                            document.head.appendChild(script);
+                        });
+                        if (typeof QRCode !== "undefined") return true;
+                    } catch (error) {
+                        // Try the next source.
+                    }
+                }
+                return false;
+            })();
+            return qrLibraryPromise;
+        }
 
-                // ប្តូរ Meta Tags ស្វ័យប្រវត្តិសម្រាប់ Telegram / Messenger Preview
-                document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${trimmedName}`;
-                
-                let ogTitle = document.querySelector('meta[property="og:title"]');
-                if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName}`);
+        function showQRFailure(container) {
+            container.innerHTML = '<p style="color:#111;text-align:center;max-width:260px;padding:8px">មិនអាចបង្កើត QR Code បានទេ។ សូមពិនិត្យអ៊ីនធឺណិត រួចចុចបង្កើតម្ដងទៀត។ លីងខាងលើនៅតែអាចចម្លងបាន។</p>';
+        }
 
-                let ogDesc = document.querySelector('meta[property="og:description"]');
-                if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+        function renderRemoteQRCode(container, linkForQR) {
+            const qrImageUrl = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&format=png&data=" + encodeURIComponent(linkForQR);
+            const img = document.createElement("img");
+            img.crossOrigin = "anonymous";
+            img.alt = "QR Code សម្រាប់កាតអញ្ជើញ";
+            img.width = 220;
+            img.height = 220;
+            img.style.maxWidth = "100%";
+            img.onload = () => {
+                container.innerHTML = "";
+                container.appendChild(img);
+            };
+            img.onerror = () => showQRFailure(container);
+            img.src = qrImageUrl;
+        }
 
-                let twTitle = document.querySelector('meta[name="twitter:title"]');
-                if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName}`);
-
-                let twDesc = document.querySelector('meta[name="twitter:description"]');
-                if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${trimmedName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
-            }
-        });
-
-        // បង្កើតលីងអញ្ជើញទម្រង់ ?to= និង QR Code
-        function generateLink() {
+        async function generateLink() {
             const guestInput = document.getElementById('guestName');
             const name = guestInput.value.trim();
 
@@ -405,154 +397,240 @@
             }
 
             currentGuestName = name;
-            actualLinkToCopy = `${SITE_URL}/?to=${encodeURIComponent(name)}`;
-            encodedQrLink = actualLinkToCopy;
+            const baseUrl = "https://laobunthengandnhanhsivhorname.pages.dev";
+            actualLinkToCopy = baseUrl + "?to=" + name;
+            encodedQrLink = baseUrl + "?to=" + encodeURIComponent(name);
 
             document.getElementById('generatedLinkText').innerText = actualLinkToCopy;
             document.getElementById('resultBox').style.display = 'block';
 
-            const qrcodeContainer = document.getElementById('qrcode');
-            qrcodeContainer.innerHTML = '';
-            try {
-                qrCodeObj = new QRCode(qrcodeContainer, {
-                    text: encodedQrLink,
-                    width: 170,
-                    height: 170,
-                    colorDark: '#000000',
-                    colorLight: '#ffffff',
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            } catch (error) {
-                qrcodeContainer.innerHTML = '<p style="color:red; font-size:12px;">មិនអាចបង្កើត QR បានទេ</p>';
+            const qrcodeContainer = document.getElementById("qrcode");
+            qrcodeContainer.innerHTML = '<p style="color:#111;text-align:center">កំពុងបង្កើត QR Code...</p>';
+            qrCodeObj = null;
+
+            const libraryLoaded = await loadQRCodeLibrary();
+            if (libraryLoaded) {
+                try {
+                    qrcodeContainer.innerHTML = "";
+                    qrCodeObj = new QRCode(qrcodeContainer, {
+                        text: encodedQrLink,
+                        width: 200,
+                        height: 200,
+                        colorDark: "#000000",
+                        colorLight: "#ffffff",
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+                    if (qrcodeContainer.querySelector("img, canvas")) return;
+                    await new Promise(resolve => setTimeout(resolve, 250));
+                    if (qrcodeContainer.querySelector("img, canvas")) return;
+                } catch (error) {
+                    qrcodeContainer.innerHTML = "";
+                }
             }
+
+            qrcodeContainer.innerHTML = "";
+            renderRemoteQRCode(qrcodeContainer, encodedQrLink);
         }
 
         async function downloadQRCode() {
-            const qrcodeDiv = document.getElementById('qrcode');
-            const qrCanvas = qrcodeDiv.querySelector('canvas');
-            const qrImg = qrcodeDiv.querySelector('img');
-            const qrSource = qrCanvas || qrImg;
+            const qrcodeDiv = document.getElementById("qrcode");
+            const qrCanvas = qrcodeDiv.querySelector("canvas");
+            const qrImg = qrcodeDiv.querySelector("img");
+            let qrSource = qrCanvas || qrImg;
 
-            if (!qrSource) {
-                alert('សូមចុចបង្កើតលីងអញ្ជើញជាមុនសិន!');
+            if (!qrSource || (qrSource.tagName === "IMG" && (!qrSource.complete || !qrSource.naturalWidth))) {
+                alert("សូមរង់ចាំឱ្យ QR Code បង្ហាញសិន រួចសាកល្បងម្ដងទៀត!");
                 return;
             }
 
             const W = 760, H = 1320;
-            const canvas = document.createElement('canvas');
+            const canvas = document.createElement("canvas");
             canvas.width = W;
             canvas.height = H;
-            const ctx = canvas.getContext('2d');
+            const ctx = canvas.getContext("2d");
 
-            ctx.fillStyle = '#ead9bd';
+            ctx.fillStyle = "#ead9bd";
             ctx.fillRect(0, 0, W, H);
-            ctx.fillStyle = '#fffdf8';
+            ctx.fillStyle = "#fffdf8";
             ctx.fillRect(28, 28, W - 56, H - 56);
-            ctx.strokeStyle = '#c7a76f';
+            ctx.strokeStyle = "#c7a76f";
             ctx.lineWidth = 2;
             ctx.strokeRect(44, 44, W - 88, H - 88);
+            ctx.strokeStyle = "#ead9bd";
+            ctx.lineWidth = 1;
+            ctx.strokeRect(54, 54, W - 108, H - 108);
 
-            ctx.textAlign = 'center';
-            ctx.fillStyle = '#9a7845';
-            ctx.font = '22px Georgia, serif';
-            ctx.fillText('W E D D I N G    I N V I T A T I O N', W / 2, 100);
+            ctx.textAlign = "center";
+            ctx.fillStyle = "#9a7845";
+            ctx.font = "22px Georgia, serif";
+            ctx.fillText("W E D D I N G   I N V I T A T I O N", W / 2, 100);
 
-            const photo = document.getElementById('qrCardPhoto');
+            const photo = document.getElementById("qrCardPhoto");
             const px = 105, py = 132, pw = 550, ph = 400;
-            ctx.fillStyle = '#f1e6d4';
+            ctx.fillStyle = "#f1e6d4";
             ctx.fillRect(px - 8, py - 8, pw + 16, ph + 16);
             if (photo && photo.complete && photo.naturalWidth > 0) {
-                ctx.drawImage(photo, px, py, pw, ph);
+                const sourceRatio = photo.naturalWidth / photo.naturalHeight;
+                const targetRatio = pw / ph;
+                let sx = 0, sy = 0, sw = photo.naturalWidth, sh = photo.naturalHeight;
+                if (sourceRatio > targetRatio) {
+                    sw = photo.naturalHeight * targetRatio;
+                    sx = (photo.naturalWidth - sw) / 2;
+                } else {
+                    sh = photo.naturalWidth / targetRatio;
+                    sy = (photo.naturalHeight - sh) / 2;
+                }
+                ctx.drawImage(photo, sx, sy, sw, sh, px, py, pw, ph);
+            } else {
+                ctx.fillStyle = "#f3eadb";
+                ctx.fillRect(px, py, pw, ph);
+                ctx.fillStyle = "#8f713f";
+                ctx.font = "bold 32px sans-serif";
+                ctx.fillText("♥", W / 2, py + 175);
+                ctx.font = "bold 24px sans-serif";
+                ctx.fillText("Hun Kimchhean & Thy Pattima", W / 2, py + 225);
             }
 
-            ctx.fillStyle = '#5f4b32';
-            ctx.font = 'bold 32px sans-serif';
-            ctx.fillText('សូមស្កេន QR Code', W / 2, 600);
-            ctx.fillStyle = '#6e675c';
-            ctx.font = '22px sans-serif';
-            ctx.fillText('ដើម្បីបើកកាតអញ្ជើញមង្គលការ', W / 2, 642);
-            ctx.fillText('របស់ អានន្ទ & សៀង សាយជីញ', W / 2, 676);
+            ctx.fillStyle = "#5f4b32";
+            ctx.font = "bold 32px sans-serif";
+            ctx.fillText("សូមស្កេន QR Code", W / 2, 600);
+            ctx.fillStyle = "#6e675c";
+            ctx.font = "22px sans-serif";
+            ctx.fillText("ដើម្បីបើកកាតអញ្ជើញមង្គលការ", W / 2, 642);
+            ctx.fillText("របស់ ហ៊ុន គឹមឈាន់ & ធី ប៉ាត់ទីម៉ា", W / 2, 676);
 
             const qrSize = 300, qx = (W - qrSize) / 2, qy = 710;
-            ctx.fillStyle = '#ffffff';
+            ctx.fillStyle = "#ffffff";
             ctx.fillRect(qx - 14, qy - 14, qrSize + 28, qrSize + 28);
-            ctx.strokeStyle = '#e8dfcf';
+            ctx.strokeStyle = "#e8dfcf";
             ctx.lineWidth = 2;
             ctx.strokeRect(qx - 14, qy - 14, qrSize + 28, qrSize + 28);
-            try { ctx.drawImage(qrSource, qx, qy, qrSize, qrSize); } catch (e) {}
+            try {
+                ctx.imageSmoothingEnabled = false;
+                ctx.drawImage(qrSource, qx, qy, qrSize, qrSize);
+            } catch (error) {
+                alert("QR Code មិនអាចបញ្ចូលក្នុងកាត PNG បានទេ។ សូមព្យាយាមបង្កើត QR Code ម្តងទៀត ឬពិនិត្យអ៊ីនធឺណិត។");
+                return;
+            }
 
-            ctx.textAlign = 'center';
-            ctx.fillStyle = '#6b5330';
-            ctx.font = 'bold 27px sans-serif';
-            ctx.fillText('អានន្ទ  &  សៀង សាយជីញ', W / 2, 1090);
-            ctx.fillStyle = '#918473';
-            ctx.font = '20px sans-serif';
-            ctx.fillText('សូមគោរពអញ្ជើញ និងរង់ចាំស្វាគមន៍ដោយក្តីរីករាយ', W / 2, 1140);
+            ctx.textAlign = "center";
+            ctx.fillStyle = "#6b5330";
+            ctx.font = "bold 27px sans-serif";
+            ctx.fillText("ហ៊ុន គឹមឈាន់  &  ធី ប៉ាត់ទីម៉ា", W / 2, 1090);
+            ctx.fillStyle = "#918473";
+            ctx.font = "20px sans-serif";
+            ctx.fillText("សូមគោរពអញ្ជើញ និងរង់ចាំស្វាគមន៍ដោយក្តីរីករាយ", W / 2, 1140);
 
             try {
-                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-                if (!blob) throw new Error('png-export-failed');
+                const blob = await new Promise((resolve, reject) => {
+                    canvas.toBlob(result => result ? resolve(result) : reject(new Error("PNG export failed")), "image/png");
+                });
                 const imageUrl = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                const safeGuestName = currentGuestName ? currentGuestName.replace(/[^a-zA-Z0-9ក-អ]/g, '_') : 'guest';
+                const link = document.createElement("a");
+                const safeGuestName = currentGuestName ? currentGuestName.replace(/[^a-zA-Z0-9ក-អ]/g, "_") : "guest";
                 link.href = imageUrl;
                 link.download = `Wedding_QR_Card_${safeGuestName}.png`;
                 document.body.appendChild(link);
                 link.click();
                 link.remove();
-                URL.revokeObjectURL(imageUrl);
+                setTimeout(() => URL.revokeObjectURL(imageUrl), 2000);
             } catch (error) {
-                alert('មិនអាចទាញយកកាតជា PNG បានទេ។');
+                alert("មិនអាចទាញយកកាតជា PNG បានទេ។ សូមពិនិត្យថា QR Code បានបង្ហាញរួច និងសាកល្បងម្ដងទៀត។");
             }
         }
 
         function copyFullMessage() {
             if (!actualLinkToCopy || !currentGuestName) return;
-            const fullText = `អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ 💍\nសូមគោរពអញ្ជើញ ${currentGuestName} ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️\n\n🔗 សូមចុចទីនេះដើម្បីបើកកាតអញ្ជើញ៖\n${actualLinkToCopy}`;
+
+            let fullText = `អាពាហ៍ពិពាហ៍ ហ៊ុន គឹមឈាន់ & ធី ប៉ាត់ទីម៉ា 💍\nសូមគោរពអញ្ជើញ ${currentGuestName} ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️\n\n🔗 សូមចុចទីនេះដើម្បីបើកកាតអញ្ជើញ៖\n${actualLinkToCopy}`;
 
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(fullText).then(() => {
-                    alert('បានចម្លងសារអញ្ជើញរួចរាល់! 📋');
-                }).catch(() => fallbackCopyText(fullText));
+                    alert("បានចម្លងសារអញ្ជើញរួចរាល់! 📋");
+                }).catch(err => {
+                    fallbackCopyText(fullText);
+                });
             } else {
                 fallbackCopyText(fullText);
             }
         }
 
         function fallbackCopyText(text) {
-            const textArea = document.createElement('textarea');
+            let textArea = document.createElement("textarea");
             textArea.value = text;
             document.body.appendChild(textArea);
             textArea.select();
             try {
                 document.execCommand('copy');
-                alert('បានចម្លងសារអញ្ជើញរួចរាល់! 📋');
+                alert("បានចម្លងសារអញ្ជើញរួចរាល់! 📋");
             } catch (err) {
-                alert('សូមអភ័យទោស ការចម្លងមិនបានសម្រេច។');
+                alert("សូមអភ័យទោស ការចម្លងមិនបានសម្រេច។");
             }
             document.body.removeChild(textArea);
         }
 
         function shareToTelegram() {
             if (!actualLinkToCopy || !currentGuestName) return;
-            const fullText = `អាពាហ៍ពិពាហ៍ អានន្ទ & សៀង សាយជីញ 💍\nសូមគោរពអញ្ជើញ ${currentGuestName} ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️\n\n🔗 សូមចុចទីនេះដើម្បីបើកកាតអញ្ជើញ៖\n${actualLinkToCopy}`;
-            const telegramUrl = `https://t.me/share/url?text=${encodeURIComponent(fullText)}`;
+
+            let messageText = `អាពាហ៍ពិពាហ៍ ហ៊ុន គឹមឈាន់ & ធី ប៉ាត់ទីម៉ា 💍\nសូមគោរពអញ្ជើញ ${currentGuestName} ចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យ សិរីសួស្តី ជ័យមង្គល ក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️`;
+            let telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(actualLinkToCopy)}&text=${encodeURIComponent(messageText)}`;
             window.open(telegramUrl, '_blank', 'noopener,noreferrer');
         }
 
-        function copyLinkOnly() {
+        async function copyLinkOnly() {
             if (!actualLinkToCopy) {
-                alert('សូមបង្កើតលីងអញ្ជើញជាមុនសិន!');
+                alert("សូមបង្កើតលីងអញ្ជើញជាមុនសិន!");
                 return;
             }
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(actualLinkToCopy).then(() => {
-                    alert('បានចម្លងតែលីងអញ្ជើញរួចរាល់! សូមចូល Messenger ហើយ Paste។');
-                }).catch(() => fallbackCopyText(actualLinkToCopy));
-            } else {
+
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(actualLinkToCopy);
+                } else {
+                    fallbackCopyText(actualLinkToCopy);
+                    return;
+                }
+                alert("បានចម្លងតែលីងអញ្ជើញរួចរាល់! សូមចូល Messenger ហើយ Paste។");
+            } catch (error) {
                 fallbackCopyText(actualLinkToCopy);
             }
         }
+
+        function shareToMessenger() {
+            if (!actualLinkToCopy || !currentGuestName) {
+                alert("សូមបង្កើតលីងអញ្ជើញជាមុនសិន!");
+                return;
+            }
+            copyFullMessage();
+        }
+
+        (function restoreBackgroundImage() {
+            const candidates = [
+                './hunkimchheanandthypattima.jpg',
+                'hunkimchheanandthypattima.jpg',
+                '/hunkimchheanandthypattima.jpg',
+                './background/hunkimchheanandthypattima.jpg',
+                'background/hunkimchheanandthypattima.jpg',
+                '/background/hunkimchheanandthypattima.jpg'
+            ];
+            let index = 0;
+            function tryNextPath() {
+                if (index >= candidates.length) return;
+                const path = candidates[index++];
+                const testImage = new Image();
+                testImage.onload = function () {
+                    document.body.style.backgroundImage = `url("${path}")`;
+                    document.body.style.backgroundRepeat = 'no-repeat';
+                    document.body.style.backgroundPosition = 'center center';
+                    document.body.style.backgroundAttachment = 'fixed';
+                    document.body.style.backgroundSize = 'cover';
+                };
+                testImage.onerror = tryNextPath;
+                testImage.src = path;
+            }
+            tryNextPath();
+        })();
     </script>
+
 </body>
 </html>
